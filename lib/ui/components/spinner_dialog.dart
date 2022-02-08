@@ -6,8 +6,11 @@ Future<void> showLoading(BuildContext context) async {
   await Future.delayed(Duration.zero);
   await showDialog(
     context: context,
+    barrierColor: Colors.white.withOpacity(0.6),
     barrierDismissible: false,
     builder: (context) => SimpleDialog(
+      backgroundColor: Colors.transparent,
+      elevation: 0,
       children: <Widget>[
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
